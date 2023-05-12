@@ -1,10 +1,8 @@
 export const IntroBlock = () => {
   return (
     <section className='relative lg:min-h-[760px] mb-16'>
-      <div
-        className='intro-block-image'
-      ></div>
-      <div className='container lg:flex lg:justify-between'>
+      <div className='intro-block-image'></div>
+      <div className='container relative lg:flex lg:justify-between'>
         <h2 className='
           font-bold text-2xl font-svn leading-normal mb-1
           lg:text-5xl lg:leading-normal lg:w-[40%]
