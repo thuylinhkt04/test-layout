@@ -12,25 +12,23 @@ const settings = {
 export const BannerHome = () => {
   return (
     <div className="banner-home mb-10">
-      <div className="container">
-        <Slider {...settings}>
-          <div className='banner-image-wrapper'>
-            <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
-          </div>
-          <div className='banner-image-wrapper'>
-            <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
-          </div>
-          <div className='banner-image-wrapper'>
-            <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
-          </div>
-          <div className='banner-image-wrapper'>
-            <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
-          </div>
-          <div className='banner-image-wrapper'>
-            <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
-          </div>
-        </Slider>
-      </div>
+      <Slider {...settings} className="banner-slider">
+        <div className='banner-image-wrapper'>
+          <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
+        </div>
+        <div className='banner-image-wrapper'>
+          <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
+        </div>
+        <div className='banner-image-wrapper'>
+          <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
+        </div>
+        <div className='banner-image-wrapper'>
+          <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
+        </div>
+        <div className='banner-image-wrapper'>
+          <img className='banner-image' src="./images/banner.jpg" alt="Banner"/>
+        </div>
+      </Slider>
     </div>
   )
 }
