@@ -7,8 +7,8 @@ const ProductCardItem: FC<{item: ProductItem}> = ({
   item
 }) => {
   const { name, image, price, types } = item
-  const ref = useRef<HTMLAnchorElement>(null);
-  const [height, setHeight] = useState<number>(444);
+  const ref = useRef<HTMLDivElement>(null);
+  const [height] = useState<number>(444);
 
   useLayoutEffect(() => {
     if (ref?.current) {
@@ -19,7 +19,12 @@ const ProductCardItem: FC<{item: ProductItem}> = ({
 
   return (
     <div className='product-card-item' style={{height: height}}>
-      <a ref={ref} className='product-card-item__inner block bg-white rounded-lg md:rounded-2xl shadow-card cursor-pointer p-3 md:p-5 text-left'>
+      <div
+        ref={ref}
+        className='
+          product-card-item__inner
+          block bg-white rounded-lg md:rounded-2xl shadow-card cursor-pointer p-3 md:p-5 text-left'
+        >
         <div className='mb-3 mr-[-8px] ml-[-8px] mt-[-8px]'>
           <img className='w-full rounded-lg md:rounded-2xl' src={image} alt={name} />
         </div>
@@ -34,7 +39,7 @@ const ProductCardItem: FC<{item: ProductItem}> = ({
         <div className='product-card-item__btn'>
           <Button classes="w-full lg:w-auto" text="Mua ngay" />
         </div>
-      </a>
+      </div>
     </div>
   )
 }

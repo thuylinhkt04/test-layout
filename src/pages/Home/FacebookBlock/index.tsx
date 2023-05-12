@@ -41,7 +41,7 @@ export const FacebookBlock = () => {
   return (
     <section className='my-12 lg:flex'>
       <div className="mb-8 lg:w-[34%]">
-        <img className="w-full" src="./../images/home-facebook-image.png" alt="Image"/>
+        <img className="w-full" src="./../images/home-facebook-image.png" alt="Review"/>
       </div>
       <div className="lg:w-[60%]">
         <div className="lg:max-w-750 lg:pl-[150px]">
@@ -60,6 +60,7 @@ export const FacebookBlock = () => {
                 href={item.link}
                 title="Facebook review"
                 target="_blank"
+                rel="noreferrer"
               >
               <img src={item.image} alt="Facebook review"/>
               </a>
