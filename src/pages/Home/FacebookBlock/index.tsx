@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import { HeadingBlock } from '../../../components'
 
 const settings = {
   infinite: true,
@@ -41,17 +42,15 @@ export const FacebookBlock = () => {
   return (
     <section className='my-12 lg:flex'>
       <div className="mb-8 lg:w-[34%]">
-        <img className="w-full" src="./../images/home-facebook-image.png" alt="Review"/>
+        <img className="w-3/4 lg:w-full" src="./../images/home-facebook-image.png" alt="Review"/>
       </div>
       <div className="lg:w-[60%]">
         <div className="lg:max-w-750 lg:pl-[150px]">
           <div className='container'>
-            <h2 className='font-bold text-2xl font-svn leading-[36px] mb-1'>
-              Đánh giá của các nàng
-            </h2>
-            <p>
-              Mấy đánh giá này là lấy từ facebook qua nè, không có tự bịa ra đâu nha. Hông tin lên facebook mà xem.
-            </p>
+            <HeadingBlock
+              title='Đánh giá của các nàng'
+              description='Mấy đánh giá này là lấy từ facebook qua nè, không có tự bịa ra đâu nha. Hông tin lên facebook mà xem.'
+            />
           </div>
           <Slider {...settings} className="facebook-slider mt-4">
             {reviews.map((item, idx) => <div key={idx} className="py-2 px-6">

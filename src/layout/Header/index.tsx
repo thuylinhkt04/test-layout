@@ -5,13 +5,13 @@ const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false)
 
   return (
-    <header className="header bg-white fixed left-0 top-0 w-full z-50 h-[74px] flex items-center lg:h-[90px]">
+    <header className="header bg-white lg:bg-[#F4F4F4] fixed left-0 top-0 w-full z-50 h-[74px] flex items-center lg:h-[90px]">
       <div className='container flex justify-between items-center'>
         <a className='inline-block w-[31px] md:w-[39px]' href='/' title="BeeYou">
           <img src="./logo.png" alt="BeeYou" />
         </a>
         <div className={`
-          overflow-hidden fixed left-0 top-0 bg-white w-full z-50 transition-[height]
+          overflow-hidden fixed left-0 top-0 bg-white lg:bg-[#F4F4F4] w-full z-50 transition-[height]
           ${isOpenMenu ? 'h-full' : 'h-0 lg:h-full'}
           lg:static lg:flex-1 lg:px-[70px]
         `}>

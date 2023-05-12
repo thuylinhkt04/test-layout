@@ -1,6 +1,6 @@
 const CardButton = () => {
   return (
-    <button className='bg-primary w-10 h-10 rounded-full relative'>
+    <button className='bg-primary hover:bg-primary/70 transition-colors w-10 h-10 rounded-full relative'>
       <span className='icon-cart text-xl'></span>
       <span
         className="

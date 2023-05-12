@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ProductCardItem } from '../../../components'
+import { ProductCardItem, HeadingBlock } from '../../../components'
 import { ProductItem } from '../../../types/index'
 import Slider, { ResponsiveObject } from "react-slick";
 
@@ -11,11 +11,11 @@ const settingDesktop: ResponsiveObject = {
 const settingMobile: ResponsiveObject = {
   breakpoint: 1024,
   settings: {
-    arrows: false,
+  arrows: false,
   infinite: true,
   speed: 500,
+  centerPadding: '20px',
   centerMode: true,
-  centerPadding: "20px",
   slidesToShow: 2,
   slidesToScroll: 1,
   },
@@ -39,20 +39,15 @@ export const ProductsBlock:FC<ProductSectionProps> = ({
   title, description, products, classes
 }) => {
   return (
-    <section className={`mb-8 ${classes}`}>
+    <section className={`mb-8 ${classes ? classes : ''}`}>
       <div className='container'>
-        <h2 className='font-bold text-2xl font-svn leading-[36px] mb-1'>
-          {title}
-        </h2>
-        <p>
-          {description}
-        </p>
-        <Slider {...settings} className="lg:grid lg:grid-cols-4 lg:gap-8">
+        <HeadingBlock title={title} description={description}/>
+      </div>
+      <Slider {...settings} className="product-slider lg:grid lg:grid-cols-4 lg:gap-8">
           {products.map((item, idx) => <div key={idx} className='px-1 py-8'>
             <ProductCardItem item={item}/>
           </div>)}
         </Slider>
-      </div>
     </section>
   )
 }

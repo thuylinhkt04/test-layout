@@ -1,21 +1,19 @@
-import { Button } from '../../../components'
+import { Button, HeadingBlock } from '../../../components'
 
 export const NewProduct = () => {
   return (
-    <section className='mb-8'>
+    <section className='mb-16'>
       <div className='container lg:flex'>
         <div className='lg:order-last lg:w-1/2 lg:pl-20'>
           <img className='w-full' src="./../images/home-new-product.png" alt="Siêu phẩm Tote mới ra lò"/>
         </div>
         <div className='lg:order-first lg:w-1/2'>
-          <h2 className='font-bold text-2xl font-svn leading-[36px] mb-1'>
-            Siêu phẩm Tote mới ra lò
-          </h2>
-          <p className='mb-8'>
-            Mới "chế" ra cái Tote mới các bác ạ. Thông tin mô tả sơ bộ các bác đọc ở dưới nhé. em đi đóng hàng
-            giao cho khách phát
-          </p>
-          <div className='bg-white rounded-2xl shadow-[0_6px_36px_rgba(0,0,0,0.1)] px-4 py-7 relative lg:px-10 lg:py-8'>
+          <HeadingBlock
+            title='Siêu phẩm Tote mới ra lò'
+            description='Mới "chế" ra cái Tote mới các bác ạ. Thông tin mô tả sơ bộ các bác đọc ở dưới nhé. em đi đóng hàng
+            giao cho khách phát'
+          />
+          <div className='mt-8 bg-white rounded-2xl shadow-[0_6px_36px_rgba(0,0,0,0.1)] px-4 py-7 relative lg:px-10 lg:py-8'>
             <div className='absolute rotate-45 w-[18px] h-[88px] bg-[#FCD4D4]/70 top-[-28px] left-[4px]'></div>
             <p className='font-medium mb-6'>Thông tin mô tả sơ bộ</p>
             <ul>

@@ -1,6 +1,6 @@
 export const IntroBlock = () => {
   return (
-    <section className='relative min-h-[760px]'>
+    <section className='relative lg:min-h-[760px] mb-16'>
       <div
         className='intro-block-image'
       ></div>

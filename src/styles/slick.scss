@@ -65,12 +65,7 @@
 .facebook-slider {
   position: relative;
   padding-bottom: 60px;
-
-  .slick-prev,
-  .slick-next {
-    bottom: -60px;
-  }
-
+  
   .slick-center {
     .review-item {
       filter: drop-shadow(0px 2.99864px 17.9918px rgba(0, 0, 0, 0.1));
@@ -122,6 +117,11 @@
       bottom: auto;
       right: 30px;
       left: auto;
+      transition: opacity .25s;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     .slick-prev {

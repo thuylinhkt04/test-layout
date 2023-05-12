@@ -1,4 +1,5 @@
 import Slider, { ResponsiveObject } from "react-slick";
+import { HeadingBlock } from '../../../components'
 
 const settingDesktop: ResponsiveObject = {
   breakpoint: 9999,
@@ -11,8 +12,8 @@ const settingDesktop: ResponsiveObject = {
 const settingMobile: ResponsiveObject = {
   breakpoint: 1024,
   settings: {
-    centerPadding: "70px",
-    slidesToShow: 2,
+    centerPadding: "95px",
+    slidesToShow: 1,
   },
 }
 
@@ -43,21 +44,19 @@ export const InstagramBlock = () => {
   return (
     <section className='text-center my-12'>
       <div className='container mb-8 lg:mb-10'>
-        <h2 className='font-bold text-2xl font-svn leading-[36px] mb-1'>
-          BeeYou trên Instagram
-        </h2>
-        <p>
-          Follow BeeYou trên instagram để có cơ hội tham gia các chương trình ưu đãi dành riêng cho người dùng Instagram
-        </p>
+        <HeadingBlock
+          title='BeeYou trên Instagram'
+          description='Follow BeeYou trên instagram để có cơ hội tham gia các chương trình ưu đãi dành riêng cho người dùng Instagram'
+        />
         <a href='/' className='text-blue inline-flex items-center gap-2' title="instagr.am/beeyoufashion">
           <span className='icon-instagram font-bold'></span>
           <span className='underline font-bold'>instagr.am/beeyoufashion</span>
         </a>
       </div>
       <Slider {...settings}>
-        {images.map((item, idx) => <div key={idx} className='px-[15px]'>
+        {images.map((item, idx) => <div key={idx} className='px-[6px] lg:px-[15px]'>
           <div className="bg-white p-1 rounded-lg lg:rounded-2xl lg:p-2">
-            <img className="w-full" src={item} alt="BeeYou trên Instagram"/>
+            <img className="w-full rounded-lg lg:rounded-2xl" src={item} alt="BeeYou trên Instagram"/>
           </div>
         </div>)}
       </Slider>

@@ -1,4 +1,4 @@
-import { FC, useRef, useState, useLayoutEffect } from 'react';
+import { FC, useRef, useState } from 'react';
 import { ProductItem } from '../types/index'
 import { formatCurrency } from '../utils/index'
 import Button from './Button'
@@ -8,25 +8,26 @@ const ProductCardItem: FC<{item: ProductItem}> = ({
 }) => {
   const { name, image, price, types } = item
   const ref = useRef<HTMLDivElement>(null);
-  const [height] = useState<number>(444);
-
-  useLayoutEffect(() => {
-    if (ref?.current) {
-      // const fullHeight = ref.current.offsetHeight + 40;
-      // setHeight(fullHeight);
-    }
-  }, []);
+  const [height, setHeight] = useState<number>(0);
 
   return (
-    <div className='product-card-item' style={{height: height}}>
+    <div style={{height: height}}>
       <div
         ref={ref}
-        className='
-          product-card-item__inner
-          block bg-white rounded-lg md:rounded-2xl shadow-card cursor-pointer p-3 md:p-5 text-left'
-        >
+        className='product-card-item shadow-card'
+      >
         <div className='mb-3 mr-[-8px] ml-[-8px] mt-[-8px]'>
-          <img className='w-full rounded-lg md:rounded-2xl' src={image} alt={name} />
+          <img
+            className='w-full rounded-lg md:rounded-2xl'
+            src={image}
+            alt={name}
+            onLoad={event => {
+              if (ref?.current) {
+                const fullHeight = ref.current.offsetHeight + 40;
+                setHeight(fullHeight);
+              }
+            }}
+          />
         </div>
         <h3 className='font-bold font-svn mb-1'>{name}</h3>
         <div className='text-blue font-bold font-svn mb-2'>{formatCurrency(price)} đ</div>

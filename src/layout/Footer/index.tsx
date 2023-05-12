@@ -28,19 +28,19 @@ const Footer = () => {
           <small className="pr-5">&copy; 2020 beebag.com.vn</small>
           <ul className="flex gap-5">
             <li>
-              <a href='/' title="facebook" target="_blank">
+              <a href='/' title="facebook" target="_blank" className="transition-colors hover:text-blue">
                 <span className='icon-facebook text-2xl'></span>
                 <span className="sr-only">Facebook</span>
               </a>
             </li>
             <li>
-              <a href='/' title="Instagram" target="_blank">
+              <a href='/' title="Instagram" target="_blank"  className="transition-colors hover:text-blue">
                 <span className='icon-instagram text-2xl'></span>
                 <span className="sr-only">Instagram</span>
               </a>
             </li>
             <li>
-              <a href='/' title="Youtube" target="_blank">
+              <a href='/' title="Youtube" target="_blank"  className="transition-colors hover:text-blue">
                 <span className='icon-youtube text-2xl'></span>
                 <span className="sr-only">Youtube</span>
               </a>
