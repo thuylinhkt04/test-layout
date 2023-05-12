@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: $background-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  padding-top: 74px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: $global-width;
+  padding-left: $global-padding;
+  padding-right: $global-padding;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-pink {
+  background-color: $color-pink;
+}
+
+.bg-yellow {
+  background-color: $color-yellow;
+}
+
+.bg-blue {
+  background-color: $color-blue;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: #fff;
+  }
+}

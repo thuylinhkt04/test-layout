@@ -1,0 +1,38 @@
+.banner-home {
+  .container {
+    padding: 0;
+  }
+}
+.banner-image {
+  border: 1px solid #C4C4C4;
+  box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+
+  &-wrapper {
+    padding: 24px 24px 30px;
+  }
+}
+
+.intro-block-image {
+  background-image: url('../../public/images/home-intro-image.png');
+  background-size: auto 100%;
+  background-position: top center;
+  height: 500px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 1024px) {
+  .banner-image-wrapper {
+    padding-bottom: 50px;
+  }
+
+  .intro-block-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 730px;
+    background-position: bottom left;
+  }
+}
