@@ -49,7 +49,7 @@ export const InstagramBlock = () => {
         <p>
           Follow BeeYou trên instagram để có cơ hội tham gia các chương trình ưu đãi dành riêng cho người dùng Instagram
         </p>
-        <a href='#' className='text-blue inline-flex items-center gap-2' title="instagr.am/beeyoufashion">
+        <a href='/' className='text-blue inline-flex items-center gap-2' title="instagr.am/beeyoufashion">
           <span className='icon-instagram font-bold'></span>
           <span className='underline font-bold'>instagr.am/beeyoufashion</span>
         </a>
