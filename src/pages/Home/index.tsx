@@ -1,4 +1,3 @@
-import React from 'react'
 import Layout from './../../layout'
 import { BannerHome } from './Banner'
 import { IntroBlock } from './IntroBlock'
@@ -7,7 +6,6 @@ import { ProductsBlock } from './ProductsBlock'
 import { InstagramBlock } from './InstagramBlock'
 import { FacebookBlock } from './FacebookBlock'
 import { ProductItem, ProductTypes } from '../../types/index'
-
 
 const products: ProductItem[] = [
   {

@@ -8,6 +8,7 @@ body {
 
 main {
   padding-top: 74px;
+  min-height: calc(100vh - 90px);
 }
 
 img {
@@ -32,4 +33,10 @@ img {
 
 .bg-blue {
   background-color: $color-blue;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    padding-top: 90px;
+  }
 }

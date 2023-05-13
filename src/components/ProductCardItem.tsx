@@ -8,7 +8,7 @@ const ProductCardItem: FC<{item: ProductItem}> = ({
 }) => {
   const { name, image, price, types } = item
   const ref = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState<number>(0);
+  const [height, setHeight] = useState<number | string>('auto');
 
   return (
     <div style={{height: height}}>
@@ -21,7 +21,7 @@ const ProductCardItem: FC<{item: ProductItem}> = ({
             className='w-full rounded-lg md:rounded-2xl'
             src={image}
             alt={name}
-            onLoad={event => {
+            onLoad={() => {
               if (ref?.current) {
                 const fullHeight = ref.current.offsetHeight + 40;
                 setHeight(fullHeight);

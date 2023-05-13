@@ -1,5 +1,7 @@
 import { useState} from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import { CardButton } from '../../components'
+import { ROUTES } from '../../constans'
 
 const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false)
@@ -7,9 +9,9 @@ const Header = () => {
   return (
     <header className="header bg-white lg:bg-[#F4F4F4] fixed left-0 top-0 w-full z-50 h-[74px] flex items-center lg:h-[90px]">
       <div className='container flex justify-between items-center'>
-        <a className='inline-block w-[31px] md:w-[39px]' href='/' title="BeeYou">
+        <Link className='inline-block w-[31px] md:w-[39px]' to='/' title="BeeYou">
           <img src="./logo.png" alt="BeeYou" />
-        </a>
+        </Link>
         <div className={`
           overflow-hidden fixed left-0 top-0 bg-white lg:bg-[#F4F4F4] w-full z-50 transition-[height]
           ${isOpenMenu ? 'h-full' : 'h-0 lg:h-full'}
@@ -21,24 +23,24 @@ const Header = () => {
           >X</button>
           <ul className='px-6 py-10 lg:p-0 lg:flex lg:gap-10'>
             <li className='mb-4 lg:mb-0'>
-              <a className='menu-link' href='/' title="Trang chủ">
+              <NavLink className='menu-link' to='/' title="Trang chủ">
                 Trang chủ
-              </a>
+              </NavLink>
             </li>
             <li className='mb-4 lg:mb-0'>
-              <a className='menu-link' href='/' title="Tote collection">
+              <NavLink className='menu-link' to={`/${ROUTES.products}`} title="Tote collection" aria-current="page">
                 Tote collection
-              </a>
+              </NavLink>
             </li>
             <li className='mb-4 lg:mb-0'>
-              <a className='menu-link' href='/' title="Về chúng tôi">
+              <NavLink className='menu-link' to={`/${ROUTES.aboutUs}`} title="Về chúng tôi">
                 Về chúng tôi
-              </a>
+              </NavLink>
             </li>
             <li className='mb-4 lg:mb-0'>
-              <a className='menu-link' href='/' title="Liên hệ">
+              <NavLink className='menu-link' to={`/${ROUTES.contact}`} title="Liên hệ">
                 Liên hệ
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

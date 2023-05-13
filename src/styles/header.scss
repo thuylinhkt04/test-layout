@@ -3,6 +3,12 @@
   font-weight: bold;
   position: relative;
 
+  &.active {
+    &::before {
+      width: 100%;
+    }
+  }
+
   &:hover {
     &::before {
       width: 100%;

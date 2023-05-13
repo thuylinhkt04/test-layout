@@ -1,6 +1,6 @@
 export const formatCurrency = (value?: number, emptyString?: string | null) => {
   if (typeof value === 'undefined' || Number.isNaN(value)) {
-    return emptyString || '';
+    return emptyString || '--';
   }
   const newValue = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -10,6 +10,15 @@ export const formatCurrency = (value?: number, emptyString?: string | null) => {
     .formatToParts(value)
     .map((p) => (p.type !== 'literal' && p.type !== 'currency' ? p.value : ''))
     .join('');
+
+  return newValue;
+};
+
+export const formatNumber = (value?: number, emptyString?: string | null) => {
+  if (typeof value === 'undefined' || Number.isNaN(value)) {
+    return emptyString || '--';
+  }
+  const newValue = new Intl.NumberFormat('vi-VI').format(value)
 
   return newValue;
 };
