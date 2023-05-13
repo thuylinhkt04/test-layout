@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { PAGING_LIMIT } from '../../constans'
+import { useState } from 'react';
 import Layout from './../../layout'
 import { CardItem, Pagination } from '../../components'
 import { ProductCardItemRaw, ProductCardItem } from '../../types/index'

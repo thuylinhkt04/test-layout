@@ -41,13 +41,14 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 # My test
 
-## Bài tesi 1:
+## Bài test 1:
 
 Em đã implement layout ở trang home.
 Code được auto deploy lên firebase [Demo](https://layout-36b25.web.app/).
 
 ## Bài test 2:
-Em làm và show UI bài test trên trang Tote collection
+Em làm và show UI bài test trên trang [Tote collection](https://layout-36b25.web.app/products)
+File: src/pages/Products
 ### Phân tích dữ liệu
 Theo bài test ta có tập dữ liệu mẫu em lưu ở thư mục mockup.
 Sau khi xem xét các yếu tố đầu ra em cần convert lại data để lưu trữ sử dụng.

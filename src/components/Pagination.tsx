@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import ReactPaginate from 'react-paginate'
 import { PAGING_LIMIT } from '../constans'
 
@@ -10,25 +10,21 @@ const Pagination = ({itemsPerPage = PAGING_LIMIT, items, onPageChange} : {
   const [totalItem, setTotalItem] = useState(0);
   const [pageCount, setPageCount] = useState(0);
 
-  useEffect(() => {
-    setTotalItem(items.length)
-  }, [items])
-
-  useEffect(() => {
-    getItemsOnPage(0)
-  }, [totalItem])
-
-  useEffect(() => {
-    setPageCount(Math.ceil(items.length / itemsPerPage));
-  }, [itemsPerPage, items])
-
-  const getItemsOnPage = (currentPage: number) => {
-    const startOffset = currentPage * PAGING_LIMIT % totalItem
+  const getItemsOnPage = useCallback((currentPage: number) => {
+    const startOffset = currentPage * PAGING_LIMIT % totalItem;
     const endOffset = startOffset + PAGING_LIMIT;
-    const itemsOnPage = items.slice(startOffset, endOffset)
-    onPageChange(itemsOnPage)
-    window.scrollTo(0, 0)
-  }
+    const itemsOnPage = items.slice(startOffset, endOffset);
+    onPageChange(itemsOnPage);
+    window.scrollTo(0, 0);
+  }, [items, onPageChange, totalItem])
+
+  useEffect(() => {
+    setTotalItem(items.length);
+    setPageCount(Math.ceil(items.length / itemsPerPage));
+    getItemsOnPage(0);
+  }, [itemsPerPage, items, getItemsOnPage])
+
+  
 
   return (
     <ReactPaginate
