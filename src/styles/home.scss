@@ -1,5 +1,5 @@
 .banner-image {
-  border: 1px solid #C4C4C4;
+  border: 1px solid #c4c4c4;
   box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 100%;
@@ -10,7 +10,7 @@
 }
 
 .intro-block-image {
-  background-image: url('../../public/images/home-intro-image.png');
+  background-image: url("../../public/images/home-intro-image.png");
   background-size: auto 100%;
   background-position: 60% 0;
   height: 500px;
@@ -19,6 +19,8 @@
 
 @media only screen and (min-width: 1024px) {
   .banner-image {
+    border-radius: 24px;
+
     &-wrapper {
       padding: 40px 74px 50px;
     }

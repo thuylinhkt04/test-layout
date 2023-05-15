@@ -1,7 +1,7 @@
 import { useState} from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { CardButton } from '../../components'
-import { ROUTES } from '../../constans'
+import { ROUTES } from '../../constants'
 
 const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false)

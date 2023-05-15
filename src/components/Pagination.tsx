@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import ReactPaginate from 'react-paginate'
-import { PAGING_LIMIT } from '../constans'
+import { PAGING_LIMIT } from '../constants'
 
 const Pagination = ({itemsPerPage = PAGING_LIMIT, items, onPageChange} : {
   itemsPerPage?: number

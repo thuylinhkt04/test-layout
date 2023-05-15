@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import NotFoundPage from './pages/NotFoundPage'
-import { ROUTES } from './constans'
+import { ROUTES } from './constants'
 
 function App() {
   return (

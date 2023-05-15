@@ -1,5 +1,5 @@
 .menu-link {
-  font-family: 'SVN-Product Sans';
+  font-family: "SVN-Product Sans";
   font-weight: bold;
   position: relative;
 
@@ -16,8 +16,8 @@
   }
 
   &::before {
-    content: '';
-    background-color: #FFC800;
+    content: "";
+    background-color: #ffc800;
     position: absolute;
     bottom: 0;
     left: 0;

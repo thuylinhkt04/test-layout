@@ -6,11 +6,11 @@
   cursor: pointer;
   padding: 12px;
   text-align: left;
-  transition: border-color .5s;
+  transition: border-color 0.5s;
 
   &::before {
-    content: '';
-    background-image: url('../../public/images/product-shadow.png');
+    content: "";
+    background-image: url("../../public/images/product-shadow.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: absolute;
@@ -20,7 +20,7 @@
     height: 100%;
     z-index: -1;
     opacity: 0;
-    transition: right .35s, top .35s;
+    transition: right 0.35s, top 0.35s;
   }
 
   &__btn {
@@ -28,7 +28,7 @@
     height: 0;
     margin-top: 16px;
     overflow: hidden;
-    transition: height .3s;
+    transition: height 0.3s;
   }
 
   &:hover {
@@ -49,7 +49,7 @@
     &:hover {
       height: 100%;
       border-color: $color-primary;
-      
+
       &::before {
         opacity: 1;
         top: -12px;
